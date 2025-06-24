@@ -1,6 +1,6 @@
 package com.blog.api.models;
 import jakarta.persistence.*;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name= "Posts")
@@ -14,6 +14,8 @@ public class Post {
     @Column(nullable = false)
     private Usuario criado_por;
     @Temporal(value = TemporalType.TIMESTAMP)
-    private OffsetDateTime criado_em;
+    private LocalDateTime criado_em;
+
+    public Post(){}
 
 }
